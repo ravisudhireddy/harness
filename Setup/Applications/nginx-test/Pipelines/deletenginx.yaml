@@ -15,3 +15,10 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 2
   workflowName: deleteitqa
+- type: ENV_STATE
+  name: deleteitprod
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
+  workflowName: deleteitprod
