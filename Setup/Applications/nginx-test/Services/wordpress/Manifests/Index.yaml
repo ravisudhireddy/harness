@@ -1,3 +1,10 @@
 harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
-storeType: Local
+gitFileConfig:
+  branch: master
+  connectorName: wordpress
+  useBranch: true
+  useInlineServiceDefinition: false
+kustomizeConfig:
+  kustomizeDirPath: wordpress
+storeType: KustomizeSourceRepo
