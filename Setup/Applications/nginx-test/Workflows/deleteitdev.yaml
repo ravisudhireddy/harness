@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: ROLLING
 concurrencyStrategy: INFRA
-envName: nginxdev
+envName: dev
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -20,7 +20,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: minikube-kubernetes-cluster
   daemonSet: false
-  infraDefinitionName: minkube-nginx
+  infraDefinitionName: student11dev
   name: Rolling
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -51,7 +51,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: minikube-kubernetes-cluster
   daemonSet: false
-  infraDefinitionName: minkube-nginx
+  infraDefinitionName: student11dev
   name: Rollback Rolling
   phaseNameForRollback: Rolling
   phaseSteps:
