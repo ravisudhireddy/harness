@@ -32,7 +32,7 @@ phases:
         delegateSelectors:
         - test-delegate01-gfgtvz-0
         deleteNamespacesForRelease: false
-        resources: testnginx
+        resources: namespace/test
         stateTimeoutInMinutes: 10
         templateUuid: null
         templateVariables: null
