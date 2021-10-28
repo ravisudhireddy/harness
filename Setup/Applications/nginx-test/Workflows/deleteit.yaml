@@ -32,8 +32,11 @@ phases:
         delegateSelectors:
         - test-delegate01-gfgtvz-0
         deleteNamespacesForRelease: false
-        resources: test
+        resources: testnginx
         stateTimeoutInMinutes: 10
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
