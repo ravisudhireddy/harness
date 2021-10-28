@@ -42,6 +42,14 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
+    steps:
+    - type: EMAIL
+      name: Email that worked
+      properties:
+        body: no it really worked
+        ccAddress: ''
+        subject: it worked, it worked
+        toAddress: ravi.sudhireddy@digitalonus.com
     stepsInParallel: false
   provisionNodes: false
   serviceName: nginx
