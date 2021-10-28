@@ -36,9 +36,13 @@ phases:
       name: Approval
       properties:
         approvalStateType: USER_GROUP
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 86400000
         userGroupNames:
-        - testgroup
+        - Account Administrator
+        - Production Support
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
