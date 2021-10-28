@@ -25,6 +25,15 @@ phases:
   phaseSteps:
   - type: K8S_PHASE_STEP
     name: Deploy
+    steps:
+    - type: K8S_DELETE
+      name: deletemynamespace
+      properties:
+        delegateSelectors:
+        - test-delegate01-gfgtvz-0
+        deleteNamespacesForRelease: false
+        resources: test
+        stateTimeoutInMinutes: 10
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
